@@ -19,6 +19,7 @@ find_package(ament_cmake REQUIRED)
 # add external project
 ExternalProject_Add(FRIClient
   GIT_REPOSITORY https://github.com/EricG5/fri_1.7
+  GIT_TAG fri-1.15
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
   INSTALL_DIR ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
