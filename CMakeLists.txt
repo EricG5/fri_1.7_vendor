@@ -9,7 +9,7 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
 endif()
 
-set(FRI_CLIENT_VERSION 1.15 CACHE STRING "FRI version to use.")
+set(FRI_CLIENT_VERSION 1.7 CACHE STRING "FRI version to use.")
 
 include(ExternalProject)
 
@@ -18,8 +18,7 @@ find_package(ament_cmake REQUIRED)
 
 # add external project
 ExternalProject_Add(FRIClient
-  GIT_REPOSITORY https://github.com/lbr-stack/fri.git
-  GIT_TAG fri-${FRI_CLIENT_VERSION}
+  GIT_REPOSITORY https://github.com/EricG5/fri_1.7
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
   INSTALL_DIR ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install
